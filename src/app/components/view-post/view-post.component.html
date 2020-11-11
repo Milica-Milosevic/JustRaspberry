@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Test</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/view">View <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Add</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <br/>
+<div class="container">
+    <!--<div class="row">
+        <div class="col-1"></div>
+        <table class="table table-bordered col-10">
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let p of posts">
+                <td>{{p.title}}</td>
+                <td>{{p.body}}</td>
+                <td><button (click)="updatePost(p.id)" class="btn">Update</button></td>
+                <td><button (click)="deletePost(p.id)" class="btn">Delete</button></td>
+            </tr>
+        </table>
+    </div>-->
+    <div class="row">
+      <div class="col-1"></div>
+      <table class="table table-bordered col-10">
+          <tr *ngFor="let p of posts">
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar></div>
+                <mat-card-title>{{p.title}}</mat-card-title>
+                <mat-card-subtitle>{{p.subtitle}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>
+                  {{p.body}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <td><button (click)="updatePost(p.id)" class="btn">Update</button></td>
+                <td><button (click)="deletePost(p.id)" class="btn">Delete</button></td>
+              </mat-card-actions>
+            </mat-card>
+          </tr>
+      </table>
+  </div>
+</div>
+
+
